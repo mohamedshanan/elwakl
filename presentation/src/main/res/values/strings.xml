@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Ana Masary</string>
+    <string name="login_screen_title">Login</string>
+    <string name="code_verification_screen_title">Code Verification</string>
+    <string name="bin_screen_title">Bin</string>
+    <string name="bin_screen_code">Security Code</string>
+    <string name="verification_code_error">Security code cannot be empty</string>
+
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="failure_invalid_verification_code">Invalid Verification Code</string>
+
+    <string name="view_text_verification_code_hint">Waiting to automatically detect SMS sent to your registered mobile number</string>
+    <string name="view_text_not_receiving_sms">If you Didn\'t receive the sms. Please login to your Masary account and click Activiate AnaMasary</string>
+
+    <string name="view_text_bin_code_hint">Please enter your bin to access the application</string>
+    <string name="view_text_code">Security Code</string>
+
+    <string name="btn_text_verify">Verify</string>
+    <string name="btn_text_generate">Request Code</string>
+    <string name="btn_text_deactivate">Deactivate Code</string>
+    <string name="code_copied">Security code copied to clipboard</string>
+    <string name="close">Close</string>
+    <string name="dialog_deactivate_title">Deactivate Encryption Key?</string>
+    <string name="dialog_deactivate_message">This will DELETE your current user from this device PERMENANTLY !!</string>
+    <string name="dialog_deactivate_positive_text">OK</string>
+    <string name="dialog_deactivate_negative_text">Cancel</string>
+    <string name="generating_otp">Generating your otp</string>
+</resources>

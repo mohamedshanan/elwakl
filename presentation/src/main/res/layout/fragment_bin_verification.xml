@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/AppTheme.TextView"
+        android:gravity="center"
+        android:labelFor="@+id/etVerificationCode"
+        android:text="@string/view_text_bin_code_hint" />
+
+    <EditText
+        android:id="@+id/etBin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:freezesText="true"
+        android:ems="4"
+        android:inputType="numberPassword"
+        android:maxLength="4" />
+
+</LinearLayout>

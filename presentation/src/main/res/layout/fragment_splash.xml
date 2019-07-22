@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_yellow_key" />
+
+    <TextView
+        style="@style/AppTheme.CodeTextView"
+        android:gravity="center"
+        android:labelFor="@+id/etVerificationCode"
+        android:text="@string/app_name" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/AppTheme.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:indeterminateTint="@color/colorPrimary"
+        android:progressTint="@color/colorRed" />
+
+</LinearLayout>

@@ -1,13 +1,9 @@
 package com.shannan.nakollaol.features.splash
 
-import android.Manifest
 import android.content.Context
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.shannan.nakollaol.R
 import com.shannan.nakollaol.core.extension.failure
@@ -43,24 +39,24 @@ class SplashFragment : BaseFragment() {
             progress.visibility = it!!
         })
 
-        checkCachedKey()
+        checkCachedUser()
     }
 
 
-    private fun checkCachedKey() {
+    private fun checkCachedUser() {
         Handler().postDelayed({
-            splashViewModel.isKeyCached()
+            splashViewModel.isUserCached()
         }, 2000)
     }
 
     private fun onSuccess() {
-        navigator.showOTPScreen(activity as Context)
+        navigator.showOrderScreen(activity as Context)
         activity?.finish()
     }
 
     private fun handleFailure(failure: Failure?) {
         splashViewModel.progress.value = View.INVISIBLE
-        navigator.showVerificationScreen(activity as Context)
+        navigator.showAuthScreen(activity as Context)
         activity?.finish()
     }
 }

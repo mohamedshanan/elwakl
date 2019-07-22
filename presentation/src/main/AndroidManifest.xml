@@ -30,15 +30,12 @@
         </activity>
 
         <activity
-            android:name="com.shannan.nakollaol.features.codeverification.CodeVerificationActivity"
-            android:label="@string/code_verification_screen_title"></activity>
+            android:name="com.shannan.nakollaol.features.authentication.AuthenticationActivity"
+            android:label="@string/code_verification_screen_title" />
 
         <activity
-            android:name="com.shannan.nakollaol.features.binverification.BinVerificationActivity"
-            android:label="@string/bin_screen_title"></activity>
-        <activity
-            android:name="com.shannan.nakollaol.features.generateotp.OTPActivity"
-            android:label="@string/bin_screen_code"></activity>
+            android:name="com.shannan.nakollaol.features.order.OrderActivity"
+            android:label="@string/bin_screen_code" />
 
     </application>
 

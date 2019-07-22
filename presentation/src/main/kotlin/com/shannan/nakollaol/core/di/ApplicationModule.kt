@@ -7,14 +7,10 @@ import com.shannan.nakollaol.AndroidApplication
 import com.shannan.nakollaol.BuildConfig
 import com.shannan.nakollaol.data.cache.UserCacheRoomImpl
 import com.shannan.nakollaol.data.cache.UserDao
-import com.shannan.nakollaol.data.net.FakeBinRepositoryImpl
-import com.shannan.nakollaol.data.net.KeyRepositoryImpl
-import com.shannan.nakollaol.data.net.TOTPRepositoryImpl
-import com.shannan.nakollaol.data.roomdb.KeyRoomDatabase
-import com.shannan.nakollaol.domain.repository.BinRepository
+import com.shannan.nakollaol.data.net.UserRepositoryImpl
+import com.shannan.nakollaol.data.roomdb.ElwaklRoomDatabase
 import com.shannan.nakollaol.domain.repository.UserCache
-import com.shannan.nakollaol.domain.repository.KeyRepository
-import com.shannan.nakollaol.domain.repository.OTPRepository
+import com.shannan.nakollaol.domain.repository.UserRepository
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -26,9 +22,9 @@ import javax.inject.Singleton
 @Module
 class ApplicationModule(private val application: AndroidApplication) {
 
-    private val keyRoomDatabase: KeyRoomDatabase = Room.databaseBuilder(
+    private val elwaklRoomDatabase: ElwaklRoomDatabase = Room.databaseBuilder(
             application.applicationContext,
-            KeyRoomDatabase::class.java,
+            ElwaklRoomDatabase::class.java,
             "Key_database")
             .fallbackToDestructiveMigration()
             .build()
@@ -47,14 +43,14 @@ class ApplicationModule(private val application: AndroidApplication) {
 
     @Provides
     @Singleton
-    fun providesRoomDatabase(): KeyRoomDatabase {
-        return keyRoomDatabase
+    fun providesRoomDatabase(): ElwaklRoomDatabase {
+        return elwaklRoomDatabase
     }
 
     @Provides
     @Singleton
     fun providesKeyDao(): UserDao {
-        return keyRoomDatabase.keyDao()
+        return elwaklRoomDatabase.userDao()
     }
 
     private fun createClient(): OkHttpClient {
@@ -68,19 +64,9 @@ class ApplicationModule(private val application: AndroidApplication) {
 
     @Provides
     @Singleton
-    fun provideKeyRepository(keyDataSource: KeyRepositoryImpl): KeyRepository = keyDataSource
+    fun providesUserRepository(keyDataSource: UserRepositoryImpl): UserRepository = keyDataSource
 
     @Provides
     @Singleton
-    fun provideBinRepository(binDataSource: FakeBinRepositoryImpl): BinRepository = binDataSource
-
-    @Provides
-    @Singleton
-    fun provideOTPRepository(totpRepositoryImpl: TOTPRepositoryImpl): OTPRepository = totpRepositoryImpl
-
-    @Provides
-    @Singleton
-    fun provideKeyCache(keyCache: UserCacheRoomImpl): UserCache = keyCache
-
-
+    fun providesUserCache(cache: UserCacheRoomImpl): UserCache = cache
 }

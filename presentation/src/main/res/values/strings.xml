@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ana Masary</string>
+    <string name="app_name">الوكل</string>
     <string name="login_screen_title">Login</string>
     <string name="code_verification_screen_title">Code Verification</string>
     <string name="bin_screen_title">Bin</string>
@@ -8,7 +8,9 @@
 
     <string name="failure_network_connection">No Network Connection.</string>
     <string name="failure_server_error">Server Error</string>
-    <string name="failure_invalid_verification_code">Invalid Verification Code</string>
+    <string name="failure_invalid_email">Invalid email</string>
+    <string name="failure_invalid_name">Invalid name</string>
+    <string name="failure_invalid_phone">Invalid phone</string>
 
     <string name="view_text_verification_code_hint">Waiting to automatically detect SMS sent to your registered mobile number</string>
     <string name="view_text_not_receiving_sms">If you Didn\'t receive the sms. Please login to your Masary account and click Activiate AnaMasary</string>

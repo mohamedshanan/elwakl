@@ -1,9 +1,9 @@
 
 package com.shannan.nakollaol.core.navigation
 
+import com.nhaarman.mockito_kotlin.whenever
 import com.shannan.nakollaol.AndroidTest
 import com.shannan.nakollaol.features.splash.SplashViewModel
-import com.nhaarman.mockito_kotlin.whenever
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -22,7 +22,7 @@ class NavigatorTest : AndroidTest() {
     }
 
     @Test fun `should forward user to login screen`() {
-        whenever(splashViewModel.isKeyCached())
-        navigator.showOTPScreen(activityContext())
+        whenever(splashViewModel.isUserCached())
+        navigator.showOrderScreen(activityContext())
     }
 }

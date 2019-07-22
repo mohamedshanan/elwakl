@@ -3,9 +3,9 @@ package com.shannan.nakollaol.features.splash
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import com.shannan.nakollaol.core.platform.BaseViewModel
-import com.shannan.nakollaol.domain.interactor.User
 import com.shannan.nakollaol.domain.interactor.UseCase
-import com.shannan.nakollaol.domain.interactor.checkCachedKey.GetCachedUserUseCase
+import com.shannan.nakollaol.domain.interactor.User
+import com.shannan.nakollaol.domain.interactor.getcacheduser.GetCachedUserUseCase
 import javax.inject.Inject
 
 class SplashViewModel
@@ -14,7 +14,7 @@ class SplashViewModel
     var progress = MutableLiveData<Int>()
     var cachedUser: MutableLiveData<User> = MutableLiveData()
 
-    fun isKeyCached() = run {
+    fun isUserCached() = run {
         progress.value = View.VISIBLE
         getCachedUserUseCase(GetCachedUserUseCase.Params(UseCase.None()))
         { it.either(::handleFailure, ::setUserLiveDataValue) }

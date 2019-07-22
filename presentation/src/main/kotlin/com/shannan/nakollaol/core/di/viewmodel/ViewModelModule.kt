@@ -2,9 +2,8 @@ package com.shannan.nakollaol.core.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.shannan.nakollaol.features.binverification.BinVerificationViewModel
-import com.shannan.nakollaol.features.codeverification.VerificationViewModel
-import com.shannan.nakollaol.features.generateotp.OTPViewModel
+import com.shannan.nakollaol.features.authentication.AuthenticationViewModel
+import com.shannan.nakollaol.features.order.OrderViewModel
 import com.shannan.nakollaol.features.splash.SplashViewModel
 import dagger.Binds
 import dagger.Module
@@ -23,16 +22,11 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(VerificationViewModel::class)
-    abstract fun bindsCodeVerificationViewModel(verificationViewModel: VerificationViewModel): ViewModel
+    @ViewModelKey(AuthenticationViewModel::class)
+    abstract fun bindsAuthenticationViewModel(authenticationViewModel: AuthenticationViewModel): ViewModel
 
     @Binds
     @IntoMap
-    @ViewModelKey(BinVerificationViewModel::class)
-    abstract fun bindsBinVerificationViewModel(binVerificationViewModel: BinVerificationViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(OTPViewModel::class)
-    abstract fun bindsOTPViewModel(otpViewModel: OTPViewModel): ViewModel
+    @ViewModelKey(OrderViewModel::class)
+    abstract fun bindsOrderViewModel(orderViewModel: OrderViewModel): ViewModel
 }

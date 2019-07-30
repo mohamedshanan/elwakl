@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.data.net
+package com.shannan.nakollaol.data.net.users
 
 import retrofit2.Retrofit
 import javax.inject.Inject

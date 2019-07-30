@@ -3,7 +3,7 @@ package com.shannan.nakollaol.core.di.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.shannan.nakollaol.features.authentication.AuthenticationViewModel
-import com.shannan.nakollaol.features.order.OrderViewModel
+import com.shannan.nakollaol.features.restaurants.RestaurantsViewModel
 import com.shannan.nakollaol.features.splash.SplashViewModel
 import dagger.Binds
 import dagger.Module
@@ -27,6 +27,6 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(OrderViewModel::class)
-    abstract fun bindsOrderViewModel(orderViewModel: OrderViewModel): ViewModel
+    @ViewModelKey(RestaurantsViewModel::class)
+    abstract fun bindsOrderViewModel(restaurantsViewModel: RestaurantsViewModel): ViewModel
 }

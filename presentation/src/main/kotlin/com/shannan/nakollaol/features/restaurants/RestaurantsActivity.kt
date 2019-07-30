@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.features.order
+package com.shannan.nakollaol.features.restaurants
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.shannan.nakollaol.R
 import com.shannan.nakollaol.core.platform.BaseActivity
 
-class OrderActivity : BaseActivity() {
+class RestaurantsActivity : BaseActivity() {
 
     override fun getToolbarTitleResource() = R.string.bin_screen_code
 
@@ -17,8 +17,8 @@ class OrderActivity : BaseActivity() {
     }
 
     companion object {
-        fun callingIntent(context: Context) = Intent(context, OrderActivity::class.java)
+        fun callingIntent(context: Context) = Intent(context, RestaurantsActivity::class.java)
     }
 
-    override fun fragment() = OrderFragment.newInstance()
+    override fun fragment() = RestaurantsFragment.newInstance()
 }

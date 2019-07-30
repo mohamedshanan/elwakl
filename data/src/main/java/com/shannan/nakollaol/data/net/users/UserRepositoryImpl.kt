@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.data.net
+package com.shannan.nakollaol.data.net.users
 
 import com.shannan.nakollaol.data.NetworkHandler
 import com.shannan.nakollaol.domain.exception.Failure

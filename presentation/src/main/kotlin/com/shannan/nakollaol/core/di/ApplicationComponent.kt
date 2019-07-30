@@ -5,8 +5,8 @@ import com.shannan.nakollaol.AndroidApplication
 import com.shannan.nakollaol.core.di.viewmodel.ViewModelModule
 import com.shannan.nakollaol.features.authentication.AuthenticationActivity
 import com.shannan.nakollaol.features.authentication.AuthenticationFragment
-import com.shannan.nakollaol.features.order.OrderActivity
-import com.shannan.nakollaol.features.order.OrderFragment
+import com.shannan.nakollaol.features.restaurants.RestaurantsActivity
+import com.shannan.nakollaol.features.restaurants.RestaurantsFragment
 import com.shannan.nakollaol.features.splash.SplashActivity
 import com.shannan.nakollaol.features.splash.SplashFragment
 import dagger.Component
@@ -18,10 +18,10 @@ interface ApplicationComponent {
     fun inject(application: AndroidApplication)
     fun inject(splashActivity: SplashActivity)
     fun inject(authenticationActivity: AuthenticationActivity)
-    fun inject(orderActivity: OrderActivity)
+    fun inject(restaurantsActivity: RestaurantsActivity)
 
     fun inject(splashFragment: SplashFragment)
     fun inject(authenticationFragment: AuthenticationFragment)
-    fun inject(orderFragment: OrderFragment)
+    fun inject(restaurantsFragment: RestaurantsFragment)
 
 }

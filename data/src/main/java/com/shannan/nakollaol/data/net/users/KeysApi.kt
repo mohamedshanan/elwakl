@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.data.net
+package com.shannan.nakollaol.data.net.users
 
 import com.shannan.nakollaol.data.Entity.UserEntity
 import retrofit2.Call

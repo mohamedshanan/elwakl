@@ -7,8 +7,10 @@ import com.shannan.nakollaol.AndroidApplication
 import com.shannan.nakollaol.BuildConfig
 import com.shannan.nakollaol.data.cache.UserCacheRoomImpl
 import com.shannan.nakollaol.data.cache.UserDao
-import com.shannan.nakollaol.data.net.UserRepositoryImpl
+import com.shannan.nakollaol.data.net.restaurants.RestaurantsRepositoryImpl
+import com.shannan.nakollaol.data.net.users.UserRepositoryImpl
 import com.shannan.nakollaol.data.roomdb.ElwaklRoomDatabase
+import com.shannan.nakollaol.domain.repository.RestaurantsRepository
 import com.shannan.nakollaol.domain.repository.UserCache
 import com.shannan.nakollaol.domain.repository.UserRepository
 import dagger.Module
@@ -65,6 +67,10 @@ class ApplicationModule(private val application: AndroidApplication) {
     @Provides
     @Singleton
     fun providesUserRepository(keyDataSource: UserRepositoryImpl): UserRepository = keyDataSource
+
+    @Provides
+    @Singleton
+    fun providesRestaurantsRepository(restaurantsRepo: RestaurantsRepositoryImpl): RestaurantsRepository = restaurantsRepo
 
     @Provides
     @Singleton

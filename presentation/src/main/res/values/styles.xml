@@ -64,8 +64,11 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="AppTheme.CounterTextView" parent="AppTheme.TextView">
-        <item name="android:textSize">18sp</item>
+    <style name="AppTheme.RestaurantName" parent="AppTheme.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="AppTheme.CodeTextView" parent="AppTheme.TextView">
@@ -74,10 +77,6 @@
         <item name="android:textSize">48sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="AppTheme.HintTextView" parent="AppTheme.TextView">
-        <item name="android:textColor">#A9A9A9</item>
     </style>
 
     <style name="button" parent="@android:style/Widget.Button">

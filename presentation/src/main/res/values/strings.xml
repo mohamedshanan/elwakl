@@ -28,4 +28,5 @@
     <string name="dialog_deactivate_positive_text">OK</string>
     <string name="dialog_deactivate_negative_text">Cancel</string>
     <string name="generating_otp">Generating your otp</string>
+    <string name="restaurant_content_description">restaurant icon</string>
 </resources>

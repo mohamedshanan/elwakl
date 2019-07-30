@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.features.restaurants
+package com.shannan.nakollaol.features.restaurantslist
 
 import androidx.lifecycle.MutableLiveData
 import com.shannan.nakollaol.core.platform.BaseViewModel

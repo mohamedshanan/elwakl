@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.features.restaurants
+package com.shannan.nakollaol.features.restaurantslist
 
 import android.view.View
 import android.view.ViewGroup

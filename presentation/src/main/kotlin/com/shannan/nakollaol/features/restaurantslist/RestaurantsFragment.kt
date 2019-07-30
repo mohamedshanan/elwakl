@@ -1,4 +1,4 @@
-package com.shannan.nakollaol.features.restaurants
+package com.shannan.nakollaol.features.restaurantslist
 
 import android.os.Bundle
 import android.widget.Toast
@@ -12,7 +12,7 @@ import com.shannan.nakollaol.domain.exception.CodeVerificationFailure
 import com.shannan.nakollaol.domain.exception.Failure
 import com.shannan.nakollaol.domain.exception.Failure.NetworkConnection
 import com.shannan.nakollaol.domain.exception.Failure.ServerError
-import kotlinx.android.synthetic.main.fragment_menus.*
+import kotlinx.android.synthetic.main.fragment_restaurants.*
 import javax.inject.Inject
 
 class RestaurantsFragment : BaseFragment() {
@@ -25,7 +25,7 @@ class RestaurantsFragment : BaseFragment() {
     lateinit var restaurantsAdapter: RestaurantsAdapter
     private lateinit var restaurantsViewModel: RestaurantsViewModel
 
-    override fun layoutId() = R.layout.fragment_menus
+    override fun layoutId() = R.layout.fragment_restaurants
 
     override fun afterInflation(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)

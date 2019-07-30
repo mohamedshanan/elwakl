@@ -34,7 +34,7 @@
             android:label="@string/code_verification_screen_title" />
 
         <activity
-            android:name="com.shannan.nakollaol.features.restaurants.RestaurantsActivity"
+            android:name="com.shannan.nakollaol.features.restaurantslist.RestaurantsActivity"
             android:label="@string/bin_screen_code" />
 
     </application>

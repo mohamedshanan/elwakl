@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.shannan.nakollaol.R
 import com.shannan.nakollaol.core.platform.BaseActivity
-import com.shannan.nakollaol.features.restaurants.RestaurantModel
+import com.shannan.nakollaol.features.restaurantslist.RestaurantModel
 
 class AuthenticationActivity : BaseActivity() {
 

@@ -2,8 +2,8 @@ package com.shannan.nakollaol.core.navigation
 
 import android.content.Context
 import com.shannan.nakollaol.features.authentication.AuthenticationActivity
-import com.shannan.nakollaol.features.restaurants.RestaurantModel
-import com.shannan.nakollaol.features.restaurants.RestaurantsActivity
+import com.shannan.nakollaol.features.restaurantslist.RestaurantModel
+import com.shannan.nakollaol.features.restaurantslist.RestaurantsActivity
 import javax.inject.Inject
 import javax.inject.Singleton
 

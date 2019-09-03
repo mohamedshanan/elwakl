@@ -12,7 +12,7 @@ class SplashActivity : BaseActivity() {
 
     override fun layoutId(): Int = R.layout.activity_layout
 
-    override fun fragment(): BaseFragment = SplashFragment.newInstance()
+    override fun getFragment(bundle: Bundle): BaseFragment = SplashFragment.newInstance()
 
     override fun afterInflation(savedInstanceState: Bundle?) {
         addFragment(savedInstanceState)

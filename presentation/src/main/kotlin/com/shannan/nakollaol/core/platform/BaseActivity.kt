@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
 
 /**
- * Base Activity class with helper methods for handling fragment transactions and back button
+ * Base Activity class with helper methods for handling getFragment transactions and back button
  * events.
  *
  * @see AppCompatActivity
@@ -85,8 +85,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
     internal fun addFragment(savedInstanceState: Bundle?) =
             savedInstanceState ?: supportFragmentManager.inTransaction {
-                add(id.fragmentContainer, fragment())
+                add(id.fragmentContainer, getFragment())
             }
 
-    abstract fun fragment(): BaseFragment
+    abstract fun getFragment(bundle: Bundle = Bundle.EMPTY): BaseFragment
 }

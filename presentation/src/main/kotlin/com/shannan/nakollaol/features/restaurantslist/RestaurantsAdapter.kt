@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.shannan.nakollaol.R
 import com.shannan.nakollaol.core.extension.inflate
 import com.shannan.nakollaol.core.extension.loadFromUrl
+import com.shannan.nakollaol.models.RestaurantModel
 import kotlinx.android.synthetic.main.row_restaurant.view.*
 import javax.inject.Inject
 import kotlin.properties.Delegates

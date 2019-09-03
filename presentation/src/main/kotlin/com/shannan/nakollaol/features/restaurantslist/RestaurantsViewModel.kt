@@ -5,6 +5,7 @@ import com.shannan.nakollaol.core.platform.BaseViewModel
 import com.shannan.nakollaol.domain.interactor.Restaurant
 import com.shannan.nakollaol.domain.interactor.UseCase
 import com.shannan.nakollaol.domain.interactor.getrestaurants.GetRestaurants
+import com.shannan.nakollaol.models.RestaurantModel
 import javax.inject.Inject
 
 

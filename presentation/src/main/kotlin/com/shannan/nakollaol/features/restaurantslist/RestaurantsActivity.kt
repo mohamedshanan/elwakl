@@ -20,5 +20,5 @@ class RestaurantsActivity : BaseActivity() {
         fun callingIntent(context: Context) = Intent(context, RestaurantsActivity::class.java)
     }
 
-    override fun fragment() = RestaurantsFragment.newInstance()
+    override fun getFragment(bundle: Bundle) = RestaurantsFragment.newInstance()
 }

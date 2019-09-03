@@ -1,9 +1,10 @@
-package com.shannan.nakollaol.features.restaurantslist
+package com.shannan.nakollaol.features.restaurantmenu
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.shannan.nakollaol.R
+import com.shannan.nakollaol.Utils.Constants
 import com.shannan.nakollaol.core.extension.failure
 import com.shannan.nakollaol.core.extension.observe
 import com.shannan.nakollaol.core.extension.viewModel
@@ -12,19 +13,19 @@ import com.shannan.nakollaol.domain.exception.CodeVerificationFailure
 import com.shannan.nakollaol.domain.exception.Failure
 import com.shannan.nakollaol.domain.exception.Failure.NetworkConnection
 import com.shannan.nakollaol.domain.exception.Failure.ServerError
-import com.shannan.nakollaol.models.RestaurantModel
+import com.shannan.nakollaol.models.SandwichModel
 import kotlinx.android.synthetic.main.fragment_restaurants.*
 import javax.inject.Inject
 
-class RestaurantsFragment : BaseFragment() {
+class MenuFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() = RestaurantsFragment()
+        fun newInstance() = MenuFragment()
     }
 
     @Inject
-    lateinit var restaurantsAdapter: RestaurantsAdapter
-    private lateinit var restaurantsViewModel: RestaurantsViewModel
+    lateinit var menuAdapter: MenuAdapter
+    private lateinit var menuViewModel: MenuViewModel
 
     override fun layoutId() = R.layout.fragment_restaurants
 
@@ -32,30 +33,31 @@ class RestaurantsFragment : BaseFragment() {
         setHasOptionsMenu(true)
         appComponent.inject(this)
 
-        restaurantsViewModel = viewModel(viewModelFactory) {
-            observe(restaurantLiveData, ::renderRestaurantList)
+        menuViewModel = viewModel(viewModelFactory) {
+            observe(menuLiveData, ::renderMenuSandwiches)
             failure(failure, ::handleFailure)
         }
-        loadRestaurants()
+        loadRestaurant()
     }
 
     private fun initializeView() {
         restaurantsList.layoutManager = LinearLayoutManager(activity)
-        restaurantsList.adapter = restaurantsAdapter
-        restaurantsAdapter.clickListener = { restaurant ->
-            navigator.showRestaurantScreen(activity!!, restaurant)
+        restaurantsList.adapter = menuAdapter
+        menuAdapter.clickListener = { restaurant ->
+            //            navigator.showRestaurantScreen(activity!!, restaurant)
         }
     }
 
-    private fun loadRestaurants() {
+    private fun loadRestaurant() {
         setLoading(true)
-        restaurantsViewModel.getRestaurants()
+        menuViewModel.getMenu()
+        val sandwichModels: List<SandwichModel>? = arguments?.getParcelableArrayList(Constants.EXTRA_SANDWICHES)
     }
 
-    private fun renderRestaurantList(restaurants: List<RestaurantModel>?) {
+    private fun renderMenuSandwiches(restaurants: List<SandwichModel>?) {
         initializeView()
         Toast.makeText(activity, "" + restaurants?.size + " " + restaurants?.get(0)?.name, Toast.LENGTH_SHORT).show()
-        restaurantsAdapter.collection = restaurants.orEmpty()
+        menuAdapter.collection = restaurants.orEmpty()
         setLoading(false)
     }
 
